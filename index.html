@@ -1,17 +1,20 @@
 <!doctype html>
 <html lang="es">
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="Generación de contraseñas seguras">
   <meta name="author" content="Itensoft Digital Solutions">
   <title>Generación de contraseñas seguras</title>
-  <link href="https://getbootstrap.com/docs/4.4/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous" />
+  <link href="https://getbootstrap.com/docs/4.4/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous" />
   <meta name="theme-color" content="#563d7c" />
   <style>
     .container {
       max-width: 960px;
     }
+
     .lh-condensed {
       line-height: 1.25;
     }
@@ -30,65 +33,60 @@
       <div class="col-md-4 order-md-2 mb-4">
         <h4 class="d-flex justify-content-between align-items-center mb-3">
           <span class="text-muted">Contraseñas Seguras</span>
-          <span class="badge badge-secondary badge-pill">3</span>
+          <span id="span_pass_number" class="badge badge-secondary badge-pill">0</span>
         </h4>
         <ul id="ul_passwords" class="list-group mb-3">
-          <li class="list-group-item d-flex justify-content-between lh-condensed">
-            <div>
-              <small class="text-muted">gptJKaEiqw</small>
-            </div>
-          </li>
-          <li class="list-group-item d-flex justify-content-between lh-condensed">
-            <div>
-              <small class="text-muted">Brief description</small>
-            </div>
-          </li>
         </ul>
       </div>
       <div class="col-md-8 order-md-1">
         <h4 class="mb-3">Configuración</h4>
-        <form id="frmSecurePass" class="needs-validation" novalidate>
+        <form id="frmSecurePass" class="needs-validation">
           <hr class="mb-4">
           <div class="custom-control custom-checkbox">
-            <input type="checkbox" class="custom-control-input" id="chk_uppercase">
+            <input type="checkbox" class="custom-control-input" id="chk_uppercase" checked="true">
             <label class="custom-control-label" for="chk_uppercase">Utilizar letras mayúsculas</label>
           </div>
           <div class="custom-control custom-checkbox">
-            <input type="checkbox" class="custom-control-input" id="chk_lowercase">
+            <input type="checkbox" class="custom-control-input" id="chk_lowercase" checked="true">
             <label class="custom-control-label" for="chk_lowercase">Utilizar letras minusculas </label>
           </div>
           <div class="custom-control custom-checkbox">
-            <input type="checkbox" class="custom-control-input" id="chk_numbers">
+            <input type="checkbox" class="custom-control-input" id="chk_numbers" checked="true">
             <label class="custom-control-label" for="chk_numbers">Utilizar Números </label>
           </div>
           <div class="custom-control custom-checkbox">
-            <input type="checkbox" class="custom-control-input" id="chk_symbols">
+            <input type="checkbox" class="custom-control-input" id="chk_symbols" checked="true">
             <label class="custom-control-label" for="chk_symbols">Utilizar simbolos </label>
           </div>
           <hr class="mb-4">
           <div class="row">
             <div class="col-md-6 mb-3">
               <label for="cc-name">Longitud de contraseña</label>
-              <input type="number" min="6" max="20" value="6" class="form-control" id="length_password" placeholder="Ejem: 10" required>
+              <input type="number" min="6" max="20" value="8" class="form-control" id="password_length"
+                placeholder="Ejem: 10" required>
             </div>
             <div class="col-md-6 mb-3">
               <label for="cc-number">Cantidad de contraseñas</label>
-              <input type="number" min="1" value="1" max="15" class="form-control" id="count_passwords" placeholder="Ejem: 10" required>
+              <input type="number" min="1" value="3" max="15" class="form-control" id="password_count"
+                placeholder="Ejem: 10" required>
             </div>
           </div>
           <hr class="mb-4">
-          <button id="btnGenerate" class="btn btn-primary btn-lg btn-block" type="button">Generar contraseñas</button>
+          <button id="btnGenerate" class="btn btn-primary btn-lg btn-block" type="submit">Generar contraseñas</button>
         </form>
       </div>
     </div>
     <footer class="my-5 pt-5 text-muted text-center text-small">
       <p class="mb-1">&copy; 2020 <a href="http://itensoft.net/" target="_blank">Itensoft Digital Solutions</a></p>
       <ul class="list-inline">
-        <li class="list-inline-item"><a href="http://itensoft.net/politica-de-privacidad" target="_blank">Política de Privacidad</a></li>
+        <li class="list-inline-item"><a href="http://itensoft.net/politica-de-privacidad" target="_blank">Política de
+            Privacidad</a></li>
       </ul>
     </footer>
   </div>
-  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+    crossorigin="anonymous"></script>
   <script>window.jQuery || document.write('<script src="https://getbootstrap.com/docs/4.4/dist/js/jquery.slim.min.js"><\/script>')</script>
   <script src="https://getbootstrap.com/docs/4.4/dist/js/bootstrap.bundle.min.js"></script>
   <script src="secure-passwords.js"></script>
@@ -96,14 +94,20 @@
       (function () {
         'use strict'
         window.addEventListener('load', function () {
-          const $button = document.getElementById("btnGenerate");
-          $button.addEventListener("click", (e) => {
+          const $frm = document.getElementById("frmSecurePass");
+          $frm.addEventListener("submit", (e) => {
             e.preventDefault();
-            const oSecurePassword = Object.create(SecurePassword);
-            oSecurePassword.generate();
+            try {
+              const oSecurePassword = Object.create(SecurePassword);
+              oSecurePassword.generate();
+            } catch (err) {
+              alert(err.message);
+              console.warn(err.message);
+            }
           });
         }, false)
       }())
   </script>
 </body>
+
 </html>
