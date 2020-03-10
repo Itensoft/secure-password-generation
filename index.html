@@ -1,41 +1,17 @@
 <!doctype html>
 <html lang="es">
-
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="">
+  <meta name="description" content="Generación de contraseñas seguras">
   <meta name="author" content="Itensoft Digital Solutions">
-  <title>Generación de contraseñase seguras</title>
-  <!-- Bootstrap core CSS -->
-  <link href="https://getbootstrap.com/docs/4.4/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-  <!-- Favicons -->
-  <link rel="icon" href="https://getbootstrap.com/docs/4.4/assets/img/favicons/favicon.ico">
-  <meta name="msapplication-config" content="https://getbootstrap.com/docs/4.4/assets/img/favicons/browserconfig.xml">
-  <meta name="theme-color" content="#563d7c">
-  <style>
-    .bd-placeholder-img {
-      font-size: 1.125rem;
-      text-anchor: middle;
-      -webkit-user-select: none;
-      -moz-user-select: none;
-      -ms-user-select: none;
-      user-select: none;
-    }
-
-    @media (min-width: 768px) {
-      .bd-placeholder-img-lg {
-        font-size: 3.5rem;
-      }
-    }
-  </style>
-  <!-- Custom styles for this template -->
+  <title>Generación de contraseñas seguras</title>
+  <link href="https://getbootstrap.com/docs/4.4/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous" />
+  <meta name="theme-color" content="#563d7c" />
   <style>
     .container {
       max-width: 960px;
     }
-
     .lh-condensed {
       line-height: 1.25;
     }
@@ -50,7 +26,6 @@
         En este sitio web puedes crear contraseñas aleatorias seguras para tus aplicaciones.
       </p>
     </div>
-
     <div class="row">
       <div class="col-md-4 order-md-2 mb-4">
         <h4 class="d-flex justify-content-between align-items-center mb-3">
@@ -91,16 +66,14 @@
             <label class="custom-control-label" for="chk_symbols">Utilizar simbolos </label>
           </div>
           <hr class="mb-4">
-          <h4 class="mb-3">Generar</h4>
           <div class="row">
             <div class="col-md-6 mb-3">
               <label for="cc-name">Longitud de contraseña</label>
-              <input type="text" class="form-control" id="length_password" placeholder="Ejem: 10" required>
-              <small class="text-muted">Tamaño de contraseña</small>
+              <input type="number" min="6" max="20" value="6" class="form-control" id="length_password" placeholder="Ejem: 10" required>
             </div>
             <div class="col-md-6 mb-3">
-              <label for="cc-number">Cantidad de contraseña</label>
-              <input type="text" class="form-control" id="count_passwords" placeholder="Ejem: 10" required>
+              <label for="cc-number">Cantidad de contraseñas</label>
+              <input type="number" min="1" value="1" max="15" class="form-control" id="count_passwords" placeholder="Ejem: 10" required>
             </div>
           </div>
           <hr class="mb-4">
@@ -108,18 +81,14 @@
         </form>
       </div>
     </div>
-
     <footer class="my-5 pt-5 text-muted text-center text-small">
-      <p class="mb-1">&copy; 2019-2010 Itensoft Digital Solutions</p>
+      <p class="mb-1">&copy; 2020 <a href="http://itensoft.net/" target="_blank">Itensoft Digital Solutions</a></p>
       <ul class="list-inline">
-        <li class="list-inline-item"><a href="#">Política de Privacidad</a></li>
-        <li class="list-inline-item"><a href="#">Preguntas Frecuentes</a></li>
+        <li class="list-inline-item"><a href="http://itensoft.net/politica-de-privacidad" target="_blank">Política de Privacidad</a></li>
       </ul>
     </footer>
   </div>
-  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
-    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
-    crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
   <script>window.jQuery || document.write('<script src="https://getbootstrap.com/docs/4.4/dist/js/jquery.slim.min.js"><\/script>')</script>
   <script src="https://getbootstrap.com/docs/4.4/dist/js/bootstrap.bundle.min.js"></script>
   <script src="secure-passwords.js"></script>
@@ -137,5 +106,4 @@
       }())
   </script>
 </body>
-
 </html>
