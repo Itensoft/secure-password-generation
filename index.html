@@ -90,24 +90,7 @@
   <script>window.jQuery || document.write('<script src="https://getbootstrap.com/docs/4.4/dist/js/jquery.slim.min.js"><\/script>')</script>
   <script src="https://getbootstrap.com/docs/4.4/dist/js/bootstrap.bundle.min.js"></script>
   <script src="secure-passwords.js"></script>
-  <script>
-      (function () {
-        'use strict'
-        window.addEventListener('load', function () {
-          const $frm = document.getElementById("frmSecurePass");
-          $frm.addEventListener("submit", (e) => {
-            e.preventDefault();
-            try {
-              const oSecurePassword = Object.create(SecurePassword);
-              oSecurePassword.generate();
-            } catch (err) {
-              alert(err.message);
-              console.warn(err.message);
-            }
-          });
-        }, false)
-      }())
-  </script>
+  <script src="main.js"></script>
 </body>
 
 </html>
